@@ -422,7 +422,7 @@ html{
 .hr{
     border: 0;
     height: 2px;
-    margin-left: 105px;
+    margin-left: 100px;
     margin-right: 100px;
     box-shadow: inset 0 12px 12px -12px #03f;
 }
@@ -553,6 +553,14 @@ html{
     padding-top: 30px;
 }
 
+#nosotros .hr2{
+    border: 0;
+    height: 8px;
+    margin-left: 200px;
+    margin-right: 200px;
+    box-shadow: inset 0 12px 12px -12px #ffffff;
+}
+
 #nosotros .nosotrosDiv{
     width: 100%;
     height: auto;
@@ -573,7 +581,7 @@ html{
 #nosotros .nosotrosText{
     width: auto;
     height: auto;
-    padding-top: 10px;
+    padding-top: 20px;
     padding-bottom: 10px;
     text-align: end;
 }
@@ -586,24 +594,36 @@ html{
     padding-bottom: 10px;
     background-color: #ffffff;
     text-align: center;
+    box-shadow: 3px 3px 1px #cdb9ff;
 }
 
 #nosotros .nosotrosText h4 i{
     margin-left: 30px;
     font-size: 40px;
-    transition: 800ms;
-    -webkit-transition: 800ms;
-    -moz-transition: 800ms;
-    -ms-transition: 800ms;
-    -o-transition: 800ms;
+    animation: propuestaValor 2s linear infinite;
+    -webkit-animation: propuestaValor 2s linear infinite;
 }
-#nosotros .nosotrosText h4 i:hover{
-    transform: rotate(360deg);
-    -webkit-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    color: rgb(255, 139, 139);
+@keyframes propuestaValor {
+    0%{
+        color: #03f;
+    }
+    25%{
+        color: rgb(255, 139, 139);
+    }
+    50%{
+        transform: scale(1.2);
+        color: rgb(255, 139, 139);
+        -webkit-transform: scale(1.2);
+        -moz-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        -o-transform: scale(1.2);
+}
+    75%{
+        color: rgb(255, 139, 139);
+    }
+    100%{
+        color: #03f;
+    }
 }
 
 #nosotros .nosotrosText .p1{
@@ -614,12 +634,9 @@ html{
     padding-bottom: 10px;
 }
 
-#nosotros .hr2{
-    border: 0;
-    height: 8px;
-    margin-left: 200px;
-    margin-right: 200px;
-    box-shadow: inset 0 12px 12px -12px #ffffff;
+#nosotros .nosotrosText .p1 span{
+    font-weight: bolder;
+    font-size: 23px;
 }
 
 .division3{
@@ -629,15 +646,447 @@ html{
 }
 
 #servicios{
-    height: 100vh;
+    height: auto;
     width: 100%;
-    background-color: #cdb9ff;
+    background-color: #ffffff;
+    position: relative;
+}
+#servicios h2{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    color: #03f;
+    font-size: 35px;
+    text-align: center;
+    padding-top: 10px;
+}
+#servicios .hr3{
+    border: 0;
+    height: 5px;
+    margin-left: 250px;
+    margin-right: 250px;
+    box-shadow: inset 0 12px 12px -12px #03f;
+}
+#servicios p{
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    color: #5c3fdd;
+    font-size: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 150px;
+    padding-right: 150px;
+}
+#servicios p span{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    font-style: oblique;
+}
+
+#servicios .serviciosDiv{
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#servicios .serviciosDiv .gerencia{
+    height: 100%;
+    width: 100%;
+    margin: 20px;
+    align-items: center;
+}
+#servicios .serviciosDiv .gerencia .iconGerencia{
+    width: auto;
+    height: 350px;
+    padding: 20px;
+}
+#servicios .serviciosDiv .gerencia .iconGerencia img{
+    height: 100%;
+    width: 100%;
+}
+
+#servicios .serviciosDiv .gerencia .textGerencia{
+    width: auto;
+    height: auto;
+    text-align: center;
+    background-color: #ffffff;
+    box-shadow: 5px 5px 1px #8f76ff;
+}
+#servicios .serviciosDiv .gerencia .textGerencia .parte1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+}
+#servicios .serviciosDiv .gerencia .textGerencia .parte1 span{
+    font-family: 'Montserrat', sans-serif;
+    color: #8f76ff;
+    font-size: 30px;
+    font-weight: bolder;
+}
+#servicios .serviciosDiv .gerencia .textGerencia .parte1 img{
+    width: 15%;
+    padding: 10px;
+    animation: iconoGerencia 3s infinite;
+    -webkit-animation: iconoGerencia 3s infinite;
+}
+@keyframes iconoGerencia {
+    0%{
+        opacity: 0.5;
+    }
+    50%{
+        transform: translateX(-20px);
+        -webkit-transform: translateX(-20px);
+        -moz-transform: translateX(-20px);
+        -ms-transform: translateX(-20px);
+        -o-transform: translateX(-20px);
+        opacity: 1;
+}
+    100%{
+        opacity: 0.5;
+    }
+}
+#servicios .serviciosDiv .gerencia .textGerencia .parte2{
+    font-family: 'Open Sans', sans-serif;
+    color: #5c3fdd;
+    font-size: 20px;
+    padding: 0;
+    text-shadow: none;
+    text-align: start;
+    font-style: oblique;
+}
+
+
+
+#servicios .serviciosDiv .gestion{
+    height: 100%;
+    width: 100%;
+    margin: 20px;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+#servicios .serviciosDiv .gestion .textGestion{
+    width: auto;
+    height: auto;
+    text-align: center;
+    background-color: #ffffff;
+    box-shadow: -5px -5px 1px #8f76ff;
+}
+#servicios .serviciosDiv .gestion .textGestion .parte1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+}
+#servicios .serviciosDiv .gestion .textGestion .parte1 span{
+    font-family: 'Montserrat', sans-serif;
+    color: #8f76ff;
+    font-size: 30px;
+    font-weight: bolder;
+}
+#servicios .serviciosDiv .gestion .textGestion .parte1 img{
+    width: 15%;
+    padding: 10px;
+    animation: iconoGestion 3s infinite;
+    -webkit-animation: iconoGestion 3s infinite;
+}
+@keyframes iconoGestion {
+    0%{
+        opacity: 0.5;
+    }
+    50%{
+        transform: rotate(-10deg);
+        -webkit-transform: rotate(-10deg);
+        -moz-transform: rotate(-10deg);
+        -ms-transform: rotate(-10deg);
+        -o-transform: rotate(-10deg);
+        opacity: 1;
+}
+    100%{
+        opacity: 0.5;
+    }
+}
+#servicios .serviciosDiv .gestion .textGestion .parte2{
+    font-family: 'Open Sans', sans-serif;
+    color: #5c3fdd;
+    font-size: 20px;
+    padding: 0;
+    text-shadow: none;
+    text-align: end;
+    font-style: oblique;
+}
+#servicios .serviciosDiv .gestion .iconGestion{
+    width: auto;
+    height: 350px;
+    padding: 20px;
+}
+#servicios .serviciosDiv .gestion .iconGestion img{
+    height: 100%;
+    width: 100%;
+}
+
+#servicios .serviciosDiv .mindset{
+    height: 100%;
+    width: 100%;
+    margin: 20px;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+#servicios .serviciosDiv .mindset .iconMindset{
+    width: auto;
+    height: 350px;
+    padding: 20px;
+}
+#servicios .serviciosDiv .mindset .iconMindset img{
+    height: 100%;
+    width: 100%;
+}
+
+#servicios .serviciosDiv .mindset .textMindset{
+    width: auto;
+    height: auto;
+    text-align: center;
+    background-color: #ffffff;
+    box-shadow: 5px 5px 1px #8f76ff;
+}
+#servicios .serviciosDiv .mindset .textMindset .parte1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+}
+#servicios .serviciosDiv .mindset .textMindset .parte1 span{
+    font-family: 'Montserrat', sans-serif;
+    color: #8f76ff;
+    font-size: 30px;
+    font-weight: bolder;
+}
+#servicios .serviciosDiv .mindset .textMindset .parte1 img{
+    width: 15%;
+    padding: 10px;
+    animation: iconoMindset 3s infinite;
+    -webkit-animation: iconoMindset 3s infinite;
+}
+@keyframes iconoMindset {
+    0%{
+        opacity: 0.5;
+    }
+    50%{
+        transform: translateY(-10px);
+        -webkit-transform: translateY(-10px);
+        -moz-transform: translateY(-10px);
+        -ms-transform: translateY(-10px);
+        -o-transform: translateY(-10px);
+        opacity: 1;
+}
+    100%{
+        opacity: 0.5;
+}
+}
+#servicios .serviciosDiv .mindset .textMindset .parte2{
+    font-family: 'Open Sans', sans-serif;
+    color: #5c3fdd;
+    font-size: 20px;
+    padding: 0;
+    text-shadow: none;
+    text-align: start;
+    font-style: oblique;
+}
+
+#servicios .serviciosDiv .empresa{
+    height: 100%;
+    width: 100%;
+    margin: 20px;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+#servicios .serviciosDiv .empresa .textEmpresa{
+    width: auto;
+    height: auto;
+    text-align: center;
+    background-color: #ffffff;
+    box-shadow: -5px -5px 1px #8f76ff;
+}
+#servicios .serviciosDiv .empresa .textEmpresa .parte1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+}
+#servicios .serviciosDiv .empresa .textEmpresa .parte1 span{
+    font-family: 'Montserrat', sans-serif;
+    color: #8f76ff;
+    font-size: 30px;
+    font-weight: bolder;
+}
+#servicios .serviciosDiv .empresa .textEmpresa .parte1 img{
+    width: 15%;
+    padding: 10px;
+    animation: iconoEmpresa 3s infinite;
+    -webkit-animation: iconoEmpresa 3s infinite;
+}
+@keyframes iconoEmpresa {
+    0%{
+        opacity: 0.5;
+    }
+    50%{
+        transform: scale(1.2);
+        -webkit-transform: scale(1.2);
+        -moz-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        -o-transform: scale(1.2);
+        opacity: 1;
+}
+    100%{
+        opacity: 0.5;
+    }
+}
+#servicios .serviciosDiv .empresa .textEmpresa .parte2{
+    font-family: 'Open Sans', sans-serif;
+    color: #5c3fdd;
+    font-size: 20px;
+    padding: 0;
+    text-shadow: none;
+    text-align: end;
+    font-style: oblique;
+}
+#servicios .serviciosDiv .empresan .iconEmpresa{
+    width: auto;
+    height: 350px;
+    padding: 20px;
+}
+#servicios .serviciosDiv .empresa .iconEmpresa img{
+    height: 100%;
+    width: 100%;
+}
+
+/* burbujas */
+
+.burbuja{
+    border-radius: 50%;
+    background: #8f76ff;
+    opacity: .3;
+    position: absolute;
+    bottom: -100;
+    animation: burbujas 5s linear infinite ;
+    -webkit-animation: burbujas 5s linear infinite ;
+}
+
+.burbuja:nth-child(1){
+    width: 80px;
+    height: 80px;
+    left: 5%;
+    animation-duration: 6s;
+    animation-delay: 3s;
+}
+
+.burbuja:nth-child(2){
+    width: 100px;
+    height: 100px;
+    left: 35%;
+    animation-duration: 3s;
+    animation-delay: 5s;
+}
+
+.burbuja:nth-child(3){
+    width: 20px;
+    height: 20px;
+    left: 15%;
+    animation-duration: 2s;
+    animation-delay: 7s;
+}
+
+.burbuja:nth-child(4){
+    width: 50px;
+    height: 50px;
+    left: 90%;
+    animation-duration: 6s;
+    animation-delay: 3s;
+}
+
+.burbuja:nth-child(5){
+    width: 70px;
+    height: 70px;
+    left: 65%;
+    animation-duration: 3s;
+    animation-delay: 1s;
+}
+
+.burbuja:nth-child(6){
+    width: 20px;
+    height: 20px;
+    left: 50%;
+    animation-duration: 4s;
+    animation-delay: 5s;
+}
+
+.burbuja:nth-child(7){
+    width: 20px;
+    height: 20px;
+    left: 50%;
+    animation-duration: 4s;
+    animation-delay: 5s;
+}
+
+.burbuja:nth-child(8){
+    width: 100;
+    height: 100px;
+    left: 52%;
+    animation-duration: 5s;
+    animation-delay: 5s;
+}
+
+.burbuja:nth-child(9){
+    width: 65px;
+    height: 65px;
+    left: 51%;
+    animation-duration: 3s;
+    animation-delay: 2s;
+}
+
+.burbuja:nth-child(10){
+    width: 40px;
+    height: 40px;
+    left: 35%;
+    animation-duration: 5s;
+    animation-delay: 4s;
+}
+
+@keyframes burbujas{
+    0%{
+        bottom: 0;
+        opacity: 0.05;
+    }
+    30%{
+        transform: translateX(30px);
+        -webkit-transform: translateX(30px);
+        -moz-transform: translateX(30px);
+        -ms-transform: translateX(30px);
+        -o-transform: translateX(30px);
+}
+    50%{
+        opacity: .3;
+    }
+    100%{
+        bottom: 250vh;
+        opacity: 0.05;
+    }
+}
+/* burbujas */
+
+.division4{
+    width: 100%;
+    height: 150px;
+    background: url(../assets/images/division4.svg);
 }
 
 #enfoque{
     height: 100vh;
     width: 100%;
-    background-color: #ffffff;
+    background-color: green;
 }
 
 #equipo{
