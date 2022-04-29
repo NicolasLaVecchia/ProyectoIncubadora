@@ -648,7 +648,8 @@ html{
 #servicios{
     height: auto;
     width: 100%;
-    background-color: #ffffff;
+    background: url(../assets/images/fondo3.png) center no-repeat;
+    background-size: cover;
     position: relative;
 }
 #servicios h2{
@@ -685,9 +686,6 @@ html{
 #servicios .serviciosDiv{
     height: auto;
     width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
 }
 #servicios .serviciosDiv .gerencia{
     height: 100%;
@@ -724,28 +722,60 @@ html{
     font-size: 30px;
     font-weight: bolder;
 }
-#servicios .serviciosDiv .gerencia .textGerencia .parte1 img{
-    width: 15%;
-    padding: 10px;
-    animation: iconoGerencia 3s infinite;
-    -webkit-animation: iconoGerencia 3s infinite;
+#servicios .serviciosDiv .gerencia .textGerencia .parte1 span:hover{
+    color: #03f;
 }
-@keyframes iconoGerencia {
-    0%{
-        opacity: 0.5;
+
+#servicios .serviciosDiv .gerencia .textGerencia .parte1 .pulse-button{
+    width: 25px;
+    height: 25px;
+    margin-right: 15px;
+    border: none;
+    border-radius: 50%;
+    background: #8f76ff;
+    cursor: pointer;
+    box-shadow: 0 0 0 0 rgb(143, 118, 255, 0.5);
+    animation: pulse 2s infinite;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    -webkit-animation: pulse 2s infinite;
+}
+#servicios .serviciosDiv .gerencia .textGerencia .parte1 .pulse-button:hover {
+    background: #03f;
+    animation: none;
+}
+
+@keyframes pulse{
+    0% {
+        background: #8f76ff;
+        transform: scale(.9);
+        -webkit-transform: scale(.9);
+        -moz-transform: scale(.9);
+        -ms-transform: scale(.9);
+        -o-transform: scale(.9);
     }
-    50%{
-        transform: translateX(-20px);
-        -webkit-transform: translateX(-20px);
-        -moz-transform: translateX(-20px);
-        -ms-transform: translateX(-20px);
-        -o-transform: translateX(-20px);
-        opacity: 1;
-}
-    100%{
-        opacity: 0.5;
+    80% {
+        background: rgb(108 99 255);
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+        box-shadow: 0 0 0 12px rgb(143, 118, 255, 0);
+    }
+    100% {
+        background: #8f76ff;
+        transform: scale(.9);
+        -webkit-transform: scale(.9);
+        -moz-transform: scale(.9);
+        -ms-transform: scale(.9);
+        -o-transform: scale(.9);
+        box-shadow: 0 0 0 0 rgb(143, 118, 255, 0);
     }
 }
+
 #servicios .serviciosDiv .gerencia .textGerencia .parte2{
     font-family: 'Open Sans', sans-serif;
     color: #5c3fdd;
@@ -755,8 +785,6 @@ html{
     text-align: start;
     font-style: oblique;
 }
-
-
 
 #servicios .serviciosDiv .gestion{
     height: 100%;
@@ -784,29 +812,36 @@ html{
     color: #8f76ff;
     font-size: 30px;
     font-weight: bolder;
+    transition: 500ms;
+    -webkit-transition: 500ms;
+    -moz-transition: 500ms;
+    -ms-transition: 500ms;
+    -o-transition: 500ms;
 }
-#servicios .serviciosDiv .gestion .textGestion .parte1 img{
-    width: 15%;
-    padding: 10px;
-    animation: iconoGestion 3s infinite;
-    -webkit-animation: iconoGestion 3s infinite;
+#servicios .serviciosDiv .gestion .textGestion .parte1 span:hover{
+    color: #03f;
 }
-@keyframes iconoGestion {
-    0%{
-        opacity: 0.5;
-    }
-    50%{
-        transform: rotate(-10deg);
-        -webkit-transform: rotate(-10deg);
-        -moz-transform: rotate(-10deg);
-        -ms-transform: rotate(-10deg);
-        -o-transform: rotate(-10deg);
-        opacity: 1;
+#servicios .serviciosDiv .gestion .textGestion .parte1 .pulse-button{
+    width: 25px;
+    height: 25px;
+    margin-left: 15px;
+    border: none;
+    border-radius: 50%;
+    background: #8f76ff;
+    cursor: pointer;
+    box-shadow: 0 0 0 0 rgb(143, 118, 255, 0.5);
+    animation: pulse 2s infinite;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    -webkit-animation: pulse 2s infinite;
 }
-    100%{
-        opacity: 0.5;
-    }
+#servicios .serviciosDiv .gestion .textGestion .parte1 .pulse-button:hover {
+    background: #03f;
+    animation: none;
 }
+
 #servicios .serviciosDiv .gestion .textGestion .parte2{
     font-family: 'Open Sans', sans-serif;
     color: #5c3fdd;
@@ -863,28 +898,30 @@ html{
     font-size: 30px;
     font-weight: bolder;
 }
-#servicios .serviciosDiv .mindset .textMindset .parte1 img{
-    width: 15%;
-    padding: 10px;
-    animation: iconoMindset 3s infinite;
-    -webkit-animation: iconoMindset 3s infinite;
+#servicios .serviciosDiv .mindset .textMindset .parte1 span:hover{
+    color: #03f;
 }
-@keyframes iconoMindset {
-    0%{
-        opacity: 0.5;
-    }
-    50%{
-        transform: translateY(-10px);
-        -webkit-transform: translateY(-10px);
-        -moz-transform: translateY(-10px);
-        -ms-transform: translateY(-10px);
-        -o-transform: translateY(-10px);
-        opacity: 1;
+#servicios .serviciosDiv .mindset .textMindset .parte1 .pulse-button{
+    width: 25px;
+    height: 25px;
+    margin-right: 15px;
+    border: none;
+    border-radius: 50%;
+    background: #8f76ff;
+    cursor: pointer;
+    box-shadow: 0 0 0 0 rgb(143, 118, 255, 0.5);
+    animation: pulse 2s infinite;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    -webkit-animation: pulse 2s infinite;
 }
-    100%{
-        opacity: 0.5;
+#servicios .serviciosDiv .mindset .textMindset .parte1 .pulse-button:hover {
+    background: #03f;
+    animation: none;
 }
-}
+
 #servicios .serviciosDiv .mindset .textMindset .parte2{
     font-family: 'Open Sans', sans-serif;
     color: #5c3fdd;
@@ -922,28 +959,30 @@ html{
     font-size: 30px;
     font-weight: bolder;
 }
-#servicios .serviciosDiv .empresa .textEmpresa .parte1 img{
-    width: 15%;
-    padding: 10px;
-    animation: iconoEmpresa 3s infinite;
-    -webkit-animation: iconoEmpresa 3s infinite;
+#servicios .serviciosDiv .empresa .textEmpresa .parte1 span:hover{
+    color: #03f;
 }
-@keyframes iconoEmpresa {
-    0%{
-        opacity: 0.5;
-    }
-    50%{
-        transform: scale(1.2);
-        -webkit-transform: scale(1.2);
-        -moz-transform: scale(1.2);
-        -ms-transform: scale(1.2);
-        -o-transform: scale(1.2);
-        opacity: 1;
+#servicios .serviciosDiv .empresa .textEmpresa .parte1 .pulse-button{
+    width: 25px;
+    height: 25px;
+    margin-left: 15px;
+    border: none;
+    border-radius: 50%;
+    background: #8f76ff;
+    cursor: pointer;
+    box-shadow: 0 0 0 0 rgb(143, 118, 255, 0.5);
+    animation: pulse 2s infinite;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    -webkit-animation: pulse 2s infinite;
 }
-    100%{
-        opacity: 0.5;
-    }
+#servicios .serviciosDiv .empresa .textEmpresa .parte1 .pulse-button:hover {
+    background: #03f;
+    animation: none;
 }
+
 #servicios .serviciosDiv .empresa .textEmpresa .parte2{
     font-family: 'Open Sans', sans-serif;
     color: #5c3fdd;
@@ -986,6 +1025,7 @@ html{
 .burbuja:nth-child(2){
     width: 100px;
     height: 100px;
+    background: #8f76ff;
     left: 35%;
     animation-duration: 3s;
     animation-delay: 5s;
@@ -994,8 +1034,9 @@ html{
 .burbuja:nth-child(3){
     width: 20px;
     height: 20px;
+    background: #cdb9ff;
     left: 15%;
-    animation-duration: 2s;
+    animation-duration: 4s;
     animation-delay: 7s;
 }
 
@@ -1003,7 +1044,7 @@ html{
     width: 50px;
     height: 50px;
     left: 90%;
-    animation-duration: 6s;
+    animation-duration: 5s;
     animation-delay: 3s;
 }
 
@@ -1011,13 +1052,14 @@ html{
     width: 70px;
     height: 70px;
     left: 65%;
-    animation-duration: 3s;
+    animation-duration: 6s;
     animation-delay: 1s;
 }
 
 .burbuja:nth-child(6){
     width: 20px;
     height: 20px;
+    background: #cdb9ff;
     left: 50%;
     animation-duration: 4s;
     animation-delay: 5s;
@@ -1026,14 +1068,16 @@ html{
 .burbuja:nth-child(7){
     width: 20px;
     height: 20px;
+    background: #cdb9ff;
     left: 50%;
-    animation-duration: 4s;
+    animation-duration: 3s;
     animation-delay: 5s;
 }
 
 .burbuja:nth-child(8){
     width: 100;
     height: 100px;
+    background: #8f76ff;
     left: 52%;
     animation-duration: 5s;
     animation-delay: 5s;
@@ -1043,7 +1087,7 @@ html{
     width: 65px;
     height: 65px;
     left: 51%;
-    animation-duration: 3s;
+    animation-duration: 4s;
     animation-delay: 2s;
 }
 
@@ -1051,7 +1095,7 @@ html{
     width: 40px;
     height: 40px;
     left: 35%;
-    animation-duration: 5s;
+    animation-duration: 6s;
     animation-delay: 4s;
 }
 
@@ -1084,15 +1128,218 @@ html{
 }
 
 #enfoque{
-    height: 100vh;
+    height: auto;
     width: 100%;
-    background-color: green;
+    background: url(../assets/images/fondo4.png) center no-repeat;
+    background-size: cover;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+#enfoque h2{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    color: #ffffff;
+    font-size: 35px;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+#enfoque .enfoqueDiv{
+    flex-wrap: nowrap;
+    margin-top: 60px;
+    padding-bottom: 30px;
+}
+
+#enfoque .uno{
+    height: auto;
+}
+#enfoque .uno .contenedorUno{
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+#enfoque .uno .contenedorUno img{
+    height: 120px;
+    width: 120px;
+    position: relative;
+    top: -20px;
+    border-radius: 20%;
+    background-color: #ffffff;
+    padding: 10px;
+    -webkit-border-radius: 20%;
+    -moz-border-radius: 20%;
+    -ms-border-radius: 20%;
+    -o-border-radius: 20%;
+    transition: 500ms;
+    -webkit-transition: 500ms;
+    -moz-transition: 500ms;
+    -ms-transition: 500ms;
+    -o-transition: 500ms;
+}
+#enfoque .uno .contenedorUno img:hover{
+    transform: translateY(-15px);
+    -webkit-transform: translateY(-15px);
+    -moz-transform: translateY(-15px);
+    -ms-transform: translateY(-15px);
+    -o-transform: translateY(-15px);
+}
+#enfoque .uno .contenedorUno span{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    font-size: 17px;
+    color: #ffffff;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+#enfoque .dos{
+    height: auto;
+}
+#enfoque .dos .contenedorDos{
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+#enfoque .dos .contenedorDos img{
+    height: 120px;
+    width: 120px;
+    position: relative;
+    top: -20px;
+    border-radius: 20%;
+    background-color: #ffffff;
+    padding: 12px;
+    -webkit-border-radius: 20%;
+    -moz-border-radius: 20%;
+    -ms-border-radius: 20%;
+    -o-border-radius: 20%;
+    transition: 500ms;
+    -webkit-transition: 500ms;
+    -moz-transition: 500ms;
+    -ms-transition: 500ms;
+    -o-transition: 500ms;
+}
+#enfoque .dos .contenedorDos img:hover{
+    transform: translateY(-15px);
+    -webkit-transform: translateY(-15px);
+    -moz-transform: translateY(-15px);
+    -ms-transform: translateY(-15px);
+    -o-transform: translateY(-15px);
+}
+#enfoque .dos .contenedorDos span{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    font-size: 17px;
+    color: #ffffff;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+#enfoque .tres{
+    height: auto;
+}
+#enfoque .tres .contenedorTres{
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+#enfoque .tres .contenedorTres img{
+    height: 120px;
+    width: 120px;
+    position: relative;
+    top: -20px;
+    border-radius: 20%;
+    background-color: #ffffff;
+    padding: 15px;
+    -webkit-border-radius: 20%;
+    -moz-border-radius: 20%;
+    -ms-border-radius: 20%;
+    -o-border-radius: 20%;
+    transition: 500ms;
+    -webkit-transition: 500ms;
+    -moz-transition: 500ms;
+    -ms-transition: 500ms;
+    -o-transition: 500ms;
+}
+#enfoque .tres .contenedorTres img:hover{
+    transform: translateY(-15px);
+    -webkit-transform: translateY(-15px);
+    -moz-transform: translateY(-15px);
+    -ms-transform: translateY(-15px);
+    -o-transform: translateY(-15px);
+}
+#enfoque .tres .contenedorTres span{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    font-size: 17px;
+    color: #ffffff;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+#enfoque .cuatro{
+    height: 200px;
+}
+#enfoque .cuatro .contenedorCuatro{
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+#enfoque .cuatro .contenedorCuatro img{
+    height: 120px;
+    width: 120px;
+    position: relative;
+    top: -20px;
+    border-radius: 20%;
+    background-color: #ffffff;
+    padding: 12px;
+    -webkit-border-radius: 20%;
+    -moz-border-radius: 20%;
+    -ms-border-radius: 20%;
+    -o-border-radius: 20%;
+    transition: 500ms;
+    -webkit-transition: 500ms;
+    -moz-transition: 500ms;
+    -ms-transition: 500ms;
+    -o-transition: 500ms;
+}
+#enfoque .cuatro .contenedorCuatro img:hover{
+    transform: translateY(-15px);
+    -webkit-transform: translateY(-15px);
+    -moz-transform: translateY(-15px);
+    -ms-transform: translateY(-15px);
+    -o-transform: translateY(-15px);
+}
+#enfoque .cuatro .contenedorCuatro span{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    font-size: 17px;
+    color: #ffffff;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.division5{
+    width: 100%;
+    height: 100px;
+    background: url(../assets/images/division5.svg);
 }
 
 #equipo{
     height: 100vh;
     width: 100%;
-    background-color: #03f;
+    background-color: green;
 }  
 
 #ubicacion{
