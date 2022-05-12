@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="./images/incubadoraLogoAzul.png">
+  <!-- Favicon -->
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="../css/canvas.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <title>Canvas-Incubadora</title>
+
+</head>
+
+<body>
+
+  <main class="cuerpoCanvas" id="cuerpoCanvas">
+
+            <!-- inicio navbar -->
+            <nav class="navbar navbar-expand-lg sticky-top" id="nav">
+
+              <div class="container">
+  
+                  <a class="navbar-brand" href="#cuerpoCanvas"><img src="../assets/images/incubadoraLogoAzul.png" alt=""></a>
+  
+                  <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse"
+                      data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                      aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                  </button>
+  
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                      <ul class="navbar-nav justify-content-around">
+                          <li class="nav-item">
+                              <a class="nav-link" href="#subtitulo">CANVAS</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link" href="#">FODA</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link" href="#">MINDSET</a>
+                          </li>
+                          <li class="nav-item">
+                          <li class="nav-item">
+                              <a class="nav-link-ubicacion" href="#piePagina"><i class="fa-solid fa-location-dot"></i></a>
+                          </li>
+                      </ul>
+                  </div>
+                  <form class="form-inline my-2 my-lg-0 ml-auto">
+                      <a href="../index.html">INICIO</a>
+                  </form>
+              </div>
+          </nav>
+          <!-- fin navbar-->
+  
+
+    <section class="divisorNorte"><img class="col-12" src="../assets/images/division2.svg" alt="divisor_de _seccion">
+    </section>
+    <div class="fondoH1">
+      <h1>NUESTRO PRÓPOSITO ES ALCANZAR QUE EL 100% DE LAS TESIS MENTOREADAS SE CONVIERTAN EN NEGOCIOS ESTABLES</h1>
+    </div>
+    <section class="divisorSur"><img class="col-12 img-fluid" src="../assets/images/division5.svg"
+        alt="divisor_de _seccion">
+    </section>
+    <a href="#"><img class="logo" src="../assets/images/incubadoraLogoAzul.png"></img></a>
+    <p class="subtitulo" id="subtitulo">Por favor rellene con frases <strong> precisas y aclaratorias</strong> cada uno de los ítems
+      que se encuentran a continuación, no deje <strong>ningún espacio en blanco</strong> porque impedirá una evaluación
+      orgánica de la idea de negocios, si alguna de las frases guías no se corresponde a su realidad en particular,
+      <strong> busque algo análogo</strong>, la información la requerimos en esa disposición para que el sistema la
+      analice y el equipo produzca un informe.
+    </p>
+    <!--------------------------------------------------------------------------------------------------------------------------->
+
+    <div class="container">
+      <div class="propuestaValor col-12-sm">
+        <p class="subtitulosCanvas">
+          <a class="btn btn-primary" data-bs-toggle="collapse" href="#prop_valor" role="button" aria-expanded="false"
+            aria-controls="collapseExample">
+            Propuesta de Valor
+          </a>
+        </p>
+        <div class="collapse " id="prop_valor">
+          <div class="card card-body">
+            ¿Que valor añadido entregamos a nuestros clientes?/
+            ¿Que problemas estamos ayudando a resolver?/
+            ¿Que productosy/o servicios ofrecemos a cada segmento?/
+            ¿Que necesidades estampos satisfaciendo?
+          </div>
+        </div>
+        <textarea name="Propuesta de Valor" id="prop" cols="25" rows="20"></textarea>
+
+      </div>
+
+      <!--------------------------------------------------------------------------------------------------------------------------->
+      <div class="actividadesClave">
+        <p class="subtitulosCanvas">
+          <a class="btn btn-primary" data-bs-toggle="collapse" href="#act_clave" role="button" aria-expanded="false"
+            aria-controls="collapseExample">
+            Actividades Clave
+          </a>
+        </p>
+
+        <div class="collapse" id="act_clave">
+          <div class="card card-body">
+            ¿Que actividades clave requiere nuestra propuesta de valor?/
+            ¿Nuestros canales de distribución?/
+            ¿Relaciones con los clientes?/
+            ¿Fuentes de ingreso?
+          </div>
+        </div>
+        <textarea name="actividadesClave" id="acti" cols="25" rows="9"></textarea>
+      </div>
+      <!--------------------------------------------------------------------------------------------------------------------------->
+      <div class="asociacionesClave">
+        <p class="subtitulosCanvas">
+          <a class="btn btn-primary" data-bs-toggle="collapse" href="#asoc_clave" role="button" aria-expanded="false"
+            aria-controls="collapseExample">
+            Asociaciones Clave
+          </a>
+        </p>
+
+        <div class="collapse" id="asoc_clave">
+          <div class="card card-body">
+            ¿Quienes son nuestros socios clave?/
+            ¿Quienes son nuestros proveedores clave?/
+            ¿Que recursos clave podemos adquirir de nuestros clientes?
+          </div>
+        </div>
+
+        <textarea name="PasociacionesClave" id="asoc" cols="25" rows="20"></textarea>
+      </div>
+      <!--------------------------------------------------------------------------------------------------------------------------->
+      <div class="recursosClave">
+        <p class="subtitulosCanvas">
+          <a class="btn btn-primary" data-bs-toggle="collapse" href="#rec_clave" role="button" aria-expanded="false"
+            aria-controls="collapseExample">
+            Recursos Clave
+          </a>
+        </p>
+        <div class="collapse" id="rec_clave">
+          <div class="card card-body">
+            Recursos clave para nuestra propuesta de valor./
+            Para nuestros canales./
+            ¿Relaciones con los clientes?
+          </div>
+        </div>
+        <textarea name="recursosClave" id="rec" cols="25" rows="9"></textarea>
+      </div>
+      <!--------------------------------------------------------------------------------------------------------------------------->
+      <div class="relacionesClientes">
+        <p class="subtitulosCanvas">
+          <a class="btn btn-primary" data-bs-toggle="collapse" href="#rel_clientes" role="button" aria-expanded="false"
+            aria-controls="collapseExample">
+            Relaciones con clientes
+          </a>
+        </p>
+        <div class="collapse" id="rel_clientes">
+          <div class="card card-body ">
+            Tipo de relaciones con cada segmento de clientes./
+            ¿Que relaciones hemos establecido?./
+            Asistencia personal./ Asistencia personal dedicada./ Autoservicio./ Automatización de los servicios./
+            Co-creacion.
+          </div>
+        </div>
+        <textarea name="relacionesClientes" id="rel" cols="25" rows="9"></textarea>
+      </div>
+      <!--------------------------------------------------------------------------------------------------------------------------->
+      <div class="canales">
+        <p class="subtitulosCanvas">
+          <a class="btn btn-primary" data-bs-toggle="collapse" href="#canal" role="button" aria-expanded="false"
+            aria-controls="collapseExample">
+            Canales
+          </a>
+        </p>
+        <div class="collapse" id="canal">
+          <div class="card card-body ">
+            ¿A través de que canales queremos llegar a nuestros clientes?/
+            ¿Que canales funcionan mejor?/
+            ¿Cuáles son mas eficientes?
+          </div>
+        </div>
+        <textarea name="canales" id="can" cols="25" rows="9"></textarea>
+      </div>
+      <!--------------------------------------------------------------------------------------------------------------------------->
+      <div class="segmentosClientes">
+        <p class="subtitulosCanvas">
+          <a class="btn btn-primary" data-bs-toggle="collapse" href="#seg_clientes" role="button" aria-expanded="false"
+            aria-controls="collapseExample">
+            Segmentos de clientes
+          </a>
+        </p>
+        <div class="collapse" id="seg_clientes">
+          <div class="card card-body">
+            ¿A quien va dirigida nuestra propuesta de valor?/
+            ¿Quienes son nuestros clientes mas importantes?/
+            Mercado de masas/ Nicho de mercado/ Segmento/ Diversificación.
+
+          </div>
+        </div>
+        <textarea name="segmentosClientes" id="seg" cols="25" rows="20"></textarea>
+      </div>
+    </div>
+
+
+    <!-------MOBILE-------------------------------------------------------------------------------------------------------------------->
+    <div class="cajaMobile">
+
+      <div class="propuestaValor mb-3">
+        <p class="subtitulosCanvas">
+          <a class="btn btn-primary" data-bs-toggle="collapse" href="#prop_valor" role="button" aria-expanded="false"
+            aria-controls="collapseExample">
+            Propuesta de Valor
+          </a>
+        </p>
+        <div class="collapse " id="prop_valor">
+          <div class="card card-body">
+            ¿Que valor añadido entregamos a nuestros clientes?/
+            ¿Que problemas estamos ayudando a resolver?/
+            ¿Que productosy/o servicios ofrecemos a cada segmento?/
+            ¿Que necesidades estampos satisfaciendo?
+          </div>
+        </div>
+        <textarea name="Propuesta de Valor" id="prop" cols="30" rows="15"></textarea>
+
+      </div>
+
+      <!--------------------------------------------------------------------------------------------------------------------------->
+      <div class="actividadesClave mb-3">
+        <p class="subtitulosCanvas">
+          <a class="btn btn-primary" data-bs-toggle="collapse" href="#act_clave" role="button" aria-expanded="false"
+            aria-controls="collapseExample">
+            Actividades Clave
+          </a>
+        </p>
+
+        <div class="collapse" id="act_clave">
+          <div class="card card-body">
+            ¿Que actividades clave requiere nuestra propuesta de valor?/
+            ¿Nuestros canales de distribución?/
+            ¿Relaciones con los clientes?/
+            ¿Fuentes de ingreso?
+          </div>
+        </div>
+        <textarea class="img-fluid" name="actividadesClave" id="acti" cols="30" rows="15"></textarea>
+      </div>
+      <!--------------------------------------------------------------------------------------------------------------------------->
+      <div class="asociacionesClave mb-3">
+        <p class="subtitulosCanvas">
+          <a class="btn btn-primary" data-bs-toggle="collapse" href="#asoc_clave" role="button" aria-expanded="false"
+            aria-controls="collapseExample">
+            Asociaciones Clave
+          </a>
+        </p>
+
+        <div class="collapse" id="asoc_clave">
+          <div class="card card-body">
+            ¿Quienes son nuestros socios clave?/
+            ¿Quienes son nuestros proveedores clave?/
+            ¿Que recursos clave podemos adquirir de nuestros clientes?
+          </div>
+        </div>
+
+        <textarea name="asociacionesClave" id="asoc" cols="30" rows="15"></textarea>
+      </div>
+      <!--------------------------------------------------------------------------------------------------------------------------->
+      <div class="recursosClave mb-3">
+        <p class="subtitulosCanvas">
+          <a class="btn btn-primary" data-bs-toggle="collapse" href="#rec_clave" role="button" aria-expanded="false"
+            aria-controls="collapseExample">
+            Recursos Clave
+          </a>
+        </p>
+        <div class="collapse" id="rec_clave">
+          <div class="card card-body">
+            Recursos clave para nuestra propuesta de valor./
+            Para nuestros canales./
+            ¿Relaciones con los clientes?
+          </div>
+        </div>
+        <textarea name="recursosClave" id="rec" cols="30" rows="15"></textarea>
+      </div>
+      <!--------------------------------------------------------------------------------------------------------------------------->
+      <div class="relacionesClientes mb-3">
+        <p class="subtitulosCanvas">
+          <a class="btn btn-primary" data-bs-toggle="collapse" href="#rel_clientes" role="button" aria-expanded="false"
+            aria-controls="collapseExample">
+            Relaciones con clientes
+          </a>
+        </p>
+        <div class="collapse" id="rel_clientes">
+          <div class="card card-body ">
+            Tipo de relaciones con cada segmento de clientes./
+            ¿Que relaciones hemos establecido?./
+            Asistencia personal./ Asistencia personal dedicada./ Autoservicio./ Automatización de los servicios./
+            Co-creacion.
+          </div>
+        </div>
+        <textarea name="relacionesClientes" id="rel" cols="30" rows="15"></textarea>
+      </div>
+      <!--------------------------------------------------------------------------------------------------------------------------->
+      <div class="canales mb-3">
+        <p class="subtitulosCanvas">
+          <a class="btn btn-primary" data-bs-toggle="collapse" href="#canal" role="button" aria-expanded="false"
+            aria-controls="collapseExample">
+            Canales
+          </a>
+        </p>
+        <div class="collapse" id="canal">
+          <div class="card card-body ">
+            ¿A través de que canales queremos llegar a nuestros clientes?/
+            ¿Que canales funcionan mejor?/
+            ¿Cuáles son mas eficientes?
+          </div>
+        </div>
+        <textarea name="canales" id="can" cols="30" rows="15"></textarea>
+      </div>
+      <!--------------------------------------------------------------------------------------------------------------------------->
+      <div class="segmentosClientes mb-4">
+        <p class="subtitulosCanvas">
+          <a class="btn btn-primary" data-bs-toggle="collapse" href="#seg_clientes" role="button" aria-expanded="false"
+            aria-controls="collapseExample">
+            Segmentos de clientes
+          </a>
+        </p>
+        <div class="collapse" id="seg_clientes">
+          <div class="card card-body">
+            ¿A quien va dirigida nuestra propuesta de valor?/
+            ¿Quienes son nuestros clientes mas importantes?/
+            Mercado de masas/ Nicho de mercado/ Segmento/ Diversificación.
+
+          </div>
+        </div>
+        <textarea name="segmentosClientes" id="seg" cols="30" rows="15"></textarea>
+      </div>
+
+    </div>
+
+
+
+    <!---------BASE_CANVAS_DESK------------------------------------------------------------------------------------------------------------------>
+    <div class="baseCanvasDesk">
+      <div class="estructuraCostes">
+        <p class="subtitulosCanvas">
+          <a class="btn btn-primary" data-bs-toggle="collapse" href="#est_costes" role="button" aria-expanded="false"
+            aria-controls="collapseExample">
+            Estructura de costes
+          </a>
+        </p>
+        <div class="collapse" id="est_costes">
+          <div class="card card-body ">
+            ¿Cuáles son los costes mas importantes de nuestro modelo de negocio?/
+            ¿Que recursos cuestan mas?/
+            ¿Que actividades clave cuestan mas?.
+
+          </div>
+        </div>
+        <textarea name="estructuraCostes" id="cost" cols="70" rows="10"></textarea>
+      </div>
+      <!--------------------------------------------------------------------------------------------------------------------------->
+      <div class="fuenteIngresos">
+        <p class="subtitulosCanvas">
+          <a class="btn btn-primary" data-bs-toggle="collapse" href="#fue_ingresos" role="button" aria-expanded="false"
+            aria-controls="collapseExample">
+            Fuente de ingresos
+          </a>
+        </p>
+        <div class="collapse" id="fue_ingresos">
+          <div class="card card-body ">
+            ¿Que precio estan dispuestos a pagar los cientes?/
+            ¿Que precio pagan actualmente?/
+            ¿Cuáles son los metodos de pago?/
+            ¿Como prefieren pagar?/
+            ¿Que porcentaje del ingreso constituye cada una de las vias de ingreso?
+
+          </div>
+        </div>
+        <textarea name="fuenteIngresos" id="fuent" cols="70" rows="10"></textarea>
+      </div>
+    </div>
+    <!---------BASE_CANVAS_MOBILE------------------------------------------------------------------------------------------------------------------>
+
+    <div class="baseCanvasMobile">
+      <div class="estructuraCostes">
+        <p class="subtitulosCanvas">
+          <a class="btn btn-primary" data-bs-toggle="collapse" href="#est_costes" role="button" aria-expanded="false"
+            aria-controls="collapseExample">
+            Estructura de costes
+          </a>
+        </p>
+        <div class="collapse" id="est_costes">
+          <div class="card card-body ">
+            ¿Cuáles son los costes mas importantes de nuestro modelo de negocio?/
+            ¿Que recursos cuestan mas?/
+            ¿Que actividades clave cuestan mas?.
+
+          </div>
+        </div>
+        <textarea name="estructuraCostes" id="cost" cols="30" rows="15"></textarea>
+      </div>
+      <!--------------------------------------------------------------------------------------------------------------------------->
+      <div class="fuenteIngresos">
+        <p class="subtitulosCanvas">
+          <a class="btn btn-primary" data-bs-toggle="collapse" href="#fue_ingresos" role="button" aria-expanded="false"
+            aria-controls="collapseExample">
+            Fuente de ingresos
+          </a>
+        </p>
+        <div class="collapse" id="fue_ingresos">
+          <div class="card card-body">
+            ¿Que precio estan dispuestos a pagar los cientes?/
+            ¿Que precio pagan actualmente?/
+            ¿Cuáles son los metodos de pago?/
+            ¿Como prefieren pagar?/
+            ¿Que porcentaje del ingreso constituye cada una de las vias de ingreso?
+
+          </div>
+        </div>
+        <textarea name="fuenteIngresos" id="fuent" cols="30" rows="15"></textarea>
+      </div>
+    </div>
+
+
+
+    <section>
+
+      <form class="contacto" action="getform.php" method="get">
+        <legend> <span class="checkbox shadow p-3 pt-1 pb-1 bg-muted rounded "> CONTACTO</span></legend>
+
+        <div>
+          <input class="camposRelleno p-2 pe-5 m-3  shadow bg-muted rounded" name="name" type="text" id="name"
+            placeholder="Ingrese nombre y apellido" required>
+        </div>
+
+        <div>
+          <input class="camposRelleno p-2 pe-5 m-3 shadow bg-muted rounded " name="email" type="email" id="email"
+            placeholder="Ingrese su e-mail" required>
+        </div>
+
+        <button class="submit m-3 p-1">Enviar</button>
+      </form>
+    </section>
+
+    <section id="piePagina">
+
+      <div class="pieArriba">
+
+        <div class="ubicacionDiv col-lg-6 col-md-12">
+
+          <h2>¿DÓNDE ESTAMOS?</h2>
+          <div class="mapa">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3193.4447387946366!2d-73.0401106847514!3d-36.83182347994204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9669b42a8b50669d%3A0x65b8bc4390317d3c!2zVmljdG9yaWEgMTI2MCwgQ29uY2VwY2nDs24sIDQwNzA0MTcsIELDrW8gQsOtbywgQ2hpbGU!5e0!3m2!1ses-419!2sar!4v1652320512921!5m2!1ses-419!2sar"
+              style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <p>
+            Pueden ubicarnos en: Victoria 1260, Concepción, Región del Biobío, Chile.
+          </p>
+
+        </div>
+
+        <div class="infoDiv col-lg-6 col-md-12">
+
+          <div class="aliados">
+            <h2>RELACIONAMIENTO</h2>
+            <hr class="hr5">
+            <div class="imagenesAli">
+              <a href="https://www.sercotec.cl/" target="_blank" rel="noopener noreferrer">
+                <img src="../assets/images/aliadoSercotec.png" alt="">
+              </a>
+
+              <a href="https://www.coderhouse.cl/" target="_blank" rel="noopener noreferrer">
+                <img src="../assets/images/aliadoCoder.png" alt="">
+              </a>
+
+              <a href="http://postgrado.unet.edu.ve/docgerenciaetee.php" target="_blank" rel="noopener noreferrer">
+                <img src="../assets/images/aliadoDecanato.png" alt="">
+              </a>
+            </div>
+          </div>
+
+          <div class="info">
+
+            <div class="links">
+              <hr class="hrLinks">
+              <h2>Links del Sitio</h2>
+              <div class="textoLink">
+                <div>
+                  <p>
+                    <a class="link-sitio" href="../index.html#dividor1">
+                      Home
+                    </a>
+                  </p>
+                  <p>
+                    <a class="link-sitio" href="../index.html#dividor2">
+                      Nosotros
+                    </a>
+                  </p>
+                  <p>
+                    <a class="link-sitio" href="../index.html#dividor3">
+                      Servicios
+                    </a>
+                  </p>
+                  <p>
+                    <a class="link-sitio" href="../index.html#dividor4">
+                      Enfoque
+                    </a>
+                  </p>
+                  <p>
+                    <a class="link-sitio" href="../index.html#dividor5">
+                      Equipo
+                    </a>
+                  </p>
+                </div>
+                <div class="texto1">
+                  <p>
+                    <a class="link-sitio" href="canvas.html#cuerpoCanvas">
+                      CANVAS
+                    </a>
+                  </p>
+                  <p>
+                    <a class="link-sitio" href="#">
+                      FODA
+                    </a>
+                  </p>
+                  <p>
+                    <a class="link-sitio" href="#">
+                      MINDSET
+                    </a>
+                  </p>
+                </div>
+              </div>
+              <hr class="hrLinks">
+            </div>
+
+            <div class="redes">
+              <hr class="hrRedes">
+              <h2>Nuestros Contactos</h2>
+              <p>
+                <i class="fa-solid fa-envelope"></i>richardjosevargas@gmail.com
+              </p>
+              <a href="https://wa.me/+56975429159?text=¡Hola,%20quiero%20incubar%20mi%20tesis!" target="_blank">
+                <i class="fa-solid fa-phone"></i>+56 9 7542 9159
+              </a>
+              <div class="iconos">
+                <hr class="hrRedes">
+                <h2>Nuestras Redes</h2>
+                <div class="iconRedes">
+                  <a href="#" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-facebook-f"></i>
+                  </a>
+                  <a href="https://www.instagram.com/incubadoradetesis/" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-instagram"></i>
+                  </a>
+                  <a href="#" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                  </a>
+                </div>
+                <div class="logoIncub">
+
+                </div>
+                <hr class="hrRedes">
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+  </main>
+
+  <footer id="footer">
+    ©2022 - <span>INCUBADORA DE TESIS</span> - all right reserved.
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+</body>
+
+</html>
