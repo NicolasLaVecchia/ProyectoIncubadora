@@ -5437,7 +5437,7 @@ html{
         -o-transform: scale(1.1);
     }
     #piePagina .pieArriba .infoDiv .imagenesAli a img{
-        height: 100%;
+        height: 90%;
     }
     #piePagina .pieArriba .infoDiv .info{
         margin-top: 20px;
