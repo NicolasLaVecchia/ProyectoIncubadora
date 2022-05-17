@@ -5415,12 +5415,12 @@ html{
         display: flex;
         justify-content: center;
         width: 100%;
-        height: 60px;
+        height: 50px;
     }
     #piePagina .pieArriba .infoDiv .imagenesAli a{
         height: 100%;
         width: auto;
-        margin: 5px;
+        margin: 0px;
         opacity: 0.6;
         transition: 800ms;
         -webkit-transition: 800ms;
