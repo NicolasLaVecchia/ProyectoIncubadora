@@ -9,7 +9,11 @@
 body {
     background-image: url(../assets/images/fondo3.png);
     background-size: cover;
-    height: auto;
+    height: 100vh;
+    width: 100%;
+    
+ 
+    
 }
 
 .cuerpoCanvas {
@@ -17,13 +21,14 @@ body {
     margin-bottom: 1rem;
 
 }
+/*MENU_DE_NAVEGACION*/
 
 .navbar{
     background-color: #ffffff;
     z-index: 100;
     width: 100%;
-    height: 70px;
 }
+
 .navbar-brand{
     height: auto;
     width: 10%;
@@ -62,6 +67,7 @@ body {
     text-align: center;
     width: 100%;
 }
+
 .navbar-nav{
     width: 90%;
     margin-left: 0px;
@@ -159,63 +165,20 @@ body {
 }
 
 
-
-/*grilla parte A*/
-.cajaMobile{
-    display: none;
+.formularioCompleto {
+    margin: 0rem 0rem 5rem 0rem;
 }
 
-.container {
-    display: grid;
-    grid-template-areas: 
-    "asociacionesClave actividadesClave propuestaValor relacionesClientes segmentosClientes"
-    "asociacionesClave recursosClave propuestaValor canales segmentosClientes";
-
-    grid-template-rows: 1fr 1fr; 
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-
-    text-align: center;
-}
-
-.asociacionesClave {
-    grid-area: asociacionesClave;
-}
-
-.actividadesClave {
-    grid-area: actividadesClave;
-}
-
-.relacionesClientes {
-    grid-area: relacionesClientes;
-}
-
-.recursosClave {
-    grid-area: recursosClave;
-}
-
-.canales {
-    grid-area: canales;
-}
-
-.segmentosClientes {
-    grid-area: segmentosClientes;
-}
-
-.propuestaValor {
-    grid-area: propuestaValor;
-}
-
-/*cuerpo del canvas*/
+/*CUERPO_DEL_CANVAS*/
 
 .cuerpoCanvas {
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 }
 
-.cuerpoCanvas h1 {
+.cuerpoCanvas .encabezado h1 {
     text-align: center;
     margin: 1rem 3rem 1rem 3rem;
     font-family: 'Montserrat', sans-serif;
@@ -226,13 +189,27 @@ body {
     font-weight: bold;
     text-shadow: 1px 1px 1px hsl(0, 0%, 0%, 70%);
     
+    
 }
 
-.cuerpoCanvas .fondoH1 {
+.encabezado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+}
+.cuerpoCanvas .encabezado .fondoH1 {
     background-image: url(../assets/images/fondo4.png);
     background-size: cover;
-    width: 100vw;
+    width: 100%;
     
+}
+
+.encabezado .divisorNorte {
+    width: 100%;
+}
+.encabezado .divisorSur{
+    width: 100%;
 }
 
 .cuerpoCanvas .subtitulo {
@@ -268,13 +245,56 @@ strong {
         transform: rotate(360deg);
     }
 }
+/*GRID_CANVAS_DESK*/
 
+.canvasContainer {
+    display: grid;
+    grid-template-areas: 
+    "asociacionesClave actividadesClave propuestaValor relacionesClientes segmentosClientes"
+    "asociacionesClave recursosClave propuestaValor canales segmentosClientes";
 
-/*Propuesta de valor*/
+    grid-template-rows: 1fr 1fr; 
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    margin: 3rem 1rem 3rem 1rem;
+    justify-content: center;
+    text-align: center;
+    gap: 5px;
+}
 
-.container textarea {
+.asociacionesClave {
+    grid-area: asociacionesClave;
+}
+
+.actividadesClave {
+    grid-area: actividadesClave;
+}
+
+.relacionesClientes {
+    grid-area: relacionesClientes;
+}
+
+.recursosClave {
+    grid-area: recursosClave;
+}
+
+.canales {
+    grid-area: canales;
+}
+
+.segmentosClientes {
+    grid-area: segmentosClientes;
+}
+
+.propuestaValor {
+    grid-area: propuestaValor;
+}
+
+/*CANVAS_DESK*/
+
+/*imagenes*/
+
+.canvasContainer textarea {
     padding: 5px;
-    
     box-shadow: 0px 0px 10px hsl(0, 0%, 100%, 30%);
     color: blue;
     border: none;
@@ -284,123 +304,148 @@ strong {
     font-family: 'Montserrat', sans-serif;
     background-size:cover;
     background-position: center;
-    transform: rotateY(180deg)
-}
-
-/*imagenes*/
-
-#prop {
-    background-image: url(../assets/images/diamante.png);
-    background-position: center;
-}
-#prop:hover {
-    background-image: none; 
-}
-
-#asoc {
-    background-image: url(../assets/images/asoc_clave.png);
-    background-position: center;
-    
-}
-
-#asoc:hover {
-    background-image: none; 
-}
-
-#seg{
-    background-image: url(../assets/images/seg_client.png);
-    background-position: center;
-}
-
-#seg:hover {
-    background-image: none; 
-}
-
-#acti {
-    background-image: url(../assets/images/act_client.png);
-    background-position: center;
-    
-}
-
-#acti:hover {
-    background-image: none; 
-}
-
-#rec {
-    background-image: url(../assets/images/rec_clave.png);
-    background-position: center;
-    
-}
-
-#rec:hover {
-    background-image: none; 
-}
-
-#rel {
-    background-image: url(../assets/images/rel_client.png);
-    background-position: center;
-    
-}
-
-#rel:hover {
-    background-image: none; 
-}
-
-#can {
-    background-image: url(../assets/images/can.png);
-    background-position: center;
-    background-size: cover;
-    
-}
-
-#can:hover {
-    background-image: none; 
-}
-
-#cost {
-    background-image: url(../assets/images/cost.png);
-    background-position: center;
-    
-    background-size: cover;
-    
-}
-
-#cost:hover {
-    background-image: none; 
-}
-
-#fuent {
-    background-image: url(../assets/images/fuent_ing.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    
-}
-
-#fuent:hover {
-    background-image: none; 
-}
-
-
-textarea:hover {
-    transform: rotateY(0deg);
-    background-color: rgb(209, 222, 245);
-    transition: 1.5s;
-    background-image: none; 
+    transform-style: preserve-3d;
     background-color: #90c5fd;
-    visibility: visible;
 }
 
-.container::placeholder {
+.tarjeta {
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 0.8s ease;
+}
+
+.tarjeta:hover {
+    transform: rotateY(180deg);
+   
+   
+}
+
+.formularioCompleto .canvasContainer .tarjeta .frontCard__prop {
+    position: absolute;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-image:url(../assets/images/propuesta_de_valor.png),
+    radial-gradient(#9f8fe5,#cdb9ff );
+    backface-visibility: hidden; 
+    
+}
+.formularioCompleto .canvasContainer .tarjeta .frontCard__activ {
+    position: absolute;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-image:url(../assets/images/actividades_clave.png),
+    radial-gradient(#9f8fe5,#cdb9ff );
+    backface-visibility: hidden; 
+}
+.formularioCompleto .canvasContainer .tarjeta .frontCard__asoc {
+    position: absolute;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-image:url(../assets/images/asociaciones_clave.png),
+    radial-gradient(#9f8fe5,#cdb9ff );
+    backface-visibility: hidden; 
+}
+.formularioCompleto .canvasContainer .tarjeta .frontCard__recursos {
+    position: absolute;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-image:url(../assets/images/recursos_clave.png),
+    radial-gradient(#9f8fe5,#cdb9ff );
+    backface-visibility: hidden; 
+}
+.formularioCompleto .canvasContainer .tarjeta .frontCard__relaciones {
+    position: absolute;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-image:url(../assets/images/relaciones_con_clientes.png),
+    radial-gradient(#9f8fe5,#cdb9ff );
+    backface-visibility: hidden; 
+}
+.formularioCompleto .canvasContainer .tarjeta .frontCard__canales {
+    position: absolute;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-image:url(../assets/images/canales.png),
+    radial-gradient(#9f8fe5,#cdb9ff );
+    backface-visibility: hidden; 
+}
+.formularioCompleto .canvasContainer .tarjeta .frontCard__segmen {
+    position: absolute;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-image:url(../assets/images/segmentacion_de_clientes.png),
+    radial-gradient(#9f8fe5,#cdb9ff );
+    backface-visibility: hidden; 
+    
+}
+.formularioCompleto .baseCanvas .tarjeta .frontCard__costes {
+    position: absolute;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image:url(../assets/images/estructura_de_costes.png),
+    radial-gradient(#9f8fe5,#cdb9ff );
+    backface-visibility: hidden; 
+}
+.formularioCompleto .baseCanvas .tarjeta .frontCard__ingresos {
+    position: absolute;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image:url(../assets/images/fuente_de_ingresos.png),
+    radial-gradient(#9f8fe5,#cdb9ff );
+    backface-visibility: hidden; 
+}
+
+.backCard {
+    
+    transform: rotateY(180deg);
+    overflow: hidden;
+    backface-visibility: hidden;
+    
+}
+
+
+.canvasContainer .cajaAlta {
+    width: 285px;
+    height: 562px;
+    margin: 10px;
+}
+
+.canvasContainer .cajaBaja {
+    width: 250px;
+    height: 298px;
+    margin: 10px;
+}
+
+.canvasContainer::placeholder {
     color: rgb(21, 31, 49);
     padding: 5px;
     text-shadow: 0.5px 0.5px 0.5px rgba(248, 247, 247, 0.596);
     font-family: 'Montserrat', sans-serif;
     font-size: small;
-    visibility: hidden;
+    backface-visibility: hidden;
 }
 
-.container .btn  {
+.canvasContainer .btn  {
     margin-top: 1rem;
     background-color: #90c5fd;
     border: none;
@@ -412,64 +457,30 @@ textarea:hover {
 
 }
 
+.canvasContainer .card {
+    background-color: #c0ddfc;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+    text-shadow: 0.5px 0.5px 0.5px rgba(250, 247, 247, 0.7);
+}
+
 .btn:hover{
-    background-color: aqua;
+    background-color: rgb(164, 101, 247);
     transform: scale(1.5);
     transition:0.25s;
 }
 
-.container .card {
-    background-color: #c0ddfc;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: normal;
-    text-shadow: 0.5px 0.5px 0.5px rgba(250, 247, 247, 0.7);
-}
+/*BASE_CANVAS_DESK*/
 
-.container  .card {
-    background-color: #c0ddfc;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: normal;
-    text-shadow: 0.5px 0.5px 0.5px rgba(250, 247, 247, 0.7);
-    
-}
 
-/*baseCanvas*/
-
-.baseCanvasMobile {
-    display: none;
-}
-
-.baseCanvasDesk {
-
+.baseCanvas {
     display: flex;
     flex-direction: row;
-    justify-content:space-between;
-    
-   
+    justify-content: center;
+    text-align: center; 
 }
-
-.estructuraCostes {
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
-    margin: 1rem;
-}
-
-.fuenteIngresos {
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
-    margin: 1rem;
-}
-
-
-.baseCanvasDesk {
-    text-align: center;   
-}
-
-.baseCanvasDesk textarea {
+.baseCanvas textarea {
     padding: 5px;
-    
     box-shadow: 0px 0px 10px hsl(0, 0%, 100%, 30%);
     color: blue;
     border: none;
@@ -477,21 +488,31 @@ textarea:hover {
     color: rgb(21, 31, 49);
     text-shadow: 0.5px 0.5px 0.5px rgba(248, 247, 247, 0.596);
     font-family: 'Montserrat', sans-serif;
-    background-image: url(../assets/images/diamante.png);
+    background-size:cover;
     background-position: center;
-    transform: rotateY(180deg);
-}
-
-.baseCanvasDesk textarea:hover {
-    transform: rotateY(0deg);
-    background-color: rgb(209, 222, 245);
-    transition: 1.5s;
-    background-image: none; 
+    transform-style: preserve-3d;
     background-color: #90c5fd;
-    visibility: visible;
+    width: 625px;
+    height: 300px;
 }
 
-.baseCanvasDesk  .btn{
+.estructuraCostes {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    margin: 1rem;
+}
+
+.fuenteIngresos {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    margin: 1rem;
+}
+
+.baseCanvas  .btn{
     margin-top: 1rem;
     background-color: #90c5fd;
     border: none;
@@ -502,23 +523,303 @@ textarea:hover {
     padding: 5px;
     
 }
+.baseCanvas .card {
+    background-color: #c0ddfc;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif; 
+    width: 625px;
+    height: auto;
+}
 
-.baseCanvasDesk .btn:hover{
-    background-color: aqua;
+.baseCanvas textarea:hover {
+    transform: rotateY(0deg);
+    transition: 1.5s;
+    background-image: none; 
+    background-color: #90c5fd;
+    visibility: visible;
+}
+.baseCanvas .btn:hover{
+    background-color: rgb(164, 101, 247);
     transform: scale(1.5);
     transition:0.25s;
 }
 
-.baseCanvasDesk .card {
-    background-color: #c0ddfc;
+/*FODA*/
+
+.tituloFoda {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    color: #03f;
+    font-size: 35px;
     text-align: center;
-    font-family: 'Montserrat', sans-serif; ;
+    padding-top: 10px;
+    margin-top: 5rem;
+}
+.foda {
+    display: grid;
+    justify-items: center;
+    text-align:center;
+    grid-template-areas: 
+    "fortaleza oportunidad"
+    "debilidad amenaza";
+
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+    gap: 5px;
+}
+.fortalezas {
+    grid-area: fortaleza;
+    margin-left: 30rem;
+    margin-bottom: 2rem;
+    
+}
+.oportunidades {
+    grid-area: oportunidad;
+    margin-right: 30rem;
+    margin-bottom: 2rem;
+}
+.debilidades {
+    grid-area: debilidad;
+    margin-left: 30rem;
+}
+.amenazas {
+    grid-area: amenaza;
+    margin-right: 30rem;
 }
 
-hr:not([size]){
-    height: 10px;
-    margin: 10rem 10rem 0rem 10rem;
+.foda .tarjeta {
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 0.8s ease;
 }
+
+.foda .tarjeta:hover {
+    transform: rotateY(180deg);
+    background-color: #c8c0ee;
+    border-radius: 2rem;
+   
+   
+}
+.foda .tarjeta .backCard textarea {
+    padding: 1rem;
+    border-radius: 2rem;
+    border:none;
+    transform-style: preserve-3d;
+    background-color: #c8c0ee;
+}
+.foda .tarjeta .backCard {
+    
+    transform: rotateY(180deg);
+    overflow: hidden;
+    backface-visibility: hidden;
+    
+    
+}
+
+.foda .card{
+    width: 260px;
+
+}
+/*Imagenes__foda*/
+
+.formularioCompleto .foda .tarjeta .frontCard__fortalezas {
+    position: absolute;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-image:url(../assets/images/icono_fuerza.png),
+    radial-gradient(#4a82cc,#a6c2e7 );
+    backface-visibility: hidden; 
+    border-radius: 15px;
+}
+.formularioCompleto .foda .tarjeta .frontCard__oportunidades {
+    position: absolute;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-image:url(../assets/images/icono_oport.png),
+    radial-gradient(#4a82cc,#a6c2e7 );
+    backface-visibility: hidden; 
+    border-radius: 15px;
+}
+.formularioCompleto .foda .tarjeta .frontCard__debilidades {
+    position: absolute;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-image:url(../assets/images/icono_debil.png),
+    radial-gradient(#4a82cc,#a6c2e7 );
+    backface-visibility: hidden; 
+    border-radius: 15px;
+}
+
+.formularioCompleto .foda .tarjeta .frontCard__amenazas {
+    position: absolute;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-image:url(../assets/images/icono_amenazas.png),
+    radial-gradient(#4a82cc,#a6c2e7 );
+    backface-visibility: hidden; 
+    border-radius: 15px;
+}
+
+#forta:hover {
+    background-image: none; 
+    background-color: #c8c0ee;
+}
+#oport:hover {
+    background-image: none; 
+    background-color: #c8c0ee;
+}
+
+#deb:hover {
+    background-image: none; 
+    background-color: #c8c0ee;
+}
+
+#amen:hover {
+    background-image: none; 
+    background-color: #c8c0ee;
+}
+
+.foda .btn  {
+    margin-top: 1rem;
+    background-color: #90c5fd;
+    border: none;
+    text-shadow: 1px 1px 1px hsl(0, 0%, 0%, 70%);
+    box-shadow: 0px 0px 10px hsl(0, 0%, 100%, 30%);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    padding: 5px;
+
+}
+
+.foda .card {
+    background-color: #c0ddfc;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+    text-shadow: 0.5px 0.5px 0.5px rgba(250, 247, 247, 0.7);
+}
+.btn:hover{
+    background-color: rgb(164, 101, 247);
+    transform: scale(1.5);
+    transition:0.25s;
+}
+/*MINDSET*/
+
+.mindsetTitulo{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    color: #03f;
+    font-size: 35px;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.mindsetCheck {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 5rem;
+    margin-top: 3rem;
+    margin-left: 20rem;
+    margin-right: 20rem;
+    background: radial-gradient(#efe3f8, #ede9f8);
+    padding: 2rem;
+    border: transparent;
+    border-radius: 20px;
+    opacity: 80%;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+.mindsetCheck .pregunta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+    margin: 1rem 3rem 1rem 3rem;
+    color: rgb(25, 25, 26);
+    padding: 10px;
+    border-radius: 20px;
+    border-bottom: #5c3fdd;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px rgba(118, 169, 245, 0.7);
+}
+
+.mindsetCheck .mindsetPregunta {
+    margin-bottom: 1rem;
+}
+
+.mindsetCheck .pregunta .mindsetPregunta b {
+    background-color: transparent;
+    text-decoration: none;
+    color: #03f;
+    font-weight: bolder;
+    padding:5px;
+    border: 2px solid #03f;
+    border-radius: 5px;
+}
+.mindsetCheck .pregunta .mindsetPregunta input {
+    border: none;
+    box-shadow: rgba(118, 169, 245, 0.7);
+}
+    
+
+
+.entreTitulo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.entreTitulo .separador {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    color: #03f;
+    font-size: 30px;
+    text-align: center;
+    padding-top: 10px;
+    margin-top: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.entreTitulo .aclaracion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color:#5c3fdd;
+    margin: 3rem;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    text-align: center;
+}
+
+.entreTitulo .aclaracion .strongAclaracion {
+    margin-bottom: 1rem;
+}
+
+.entreTitulo .aclaracion .itemsAclaraciones {
+    display: flex;
+    flex-direction:column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-left: 10rem;
+    margin-right: 10rem; 
+}
+
+/*CONTACTO*/
 
 .contacto {
     display: flex;
@@ -542,19 +843,61 @@ hr:not([size]){
     border: none;
 }
 
-.contacto::placeholder {
-    font-size: larger;
+
+
+.contacto input {
+    background-color: transparent;
+    text-decoration: none;
+    color: #03f;
+    font-weight: bolder;
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border: 2px solid #03f;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    transition: 600ms;
+    -webkit-transition: 600ms;
+    -moz-transition: 600ms;
+    -ms-transition: 600ms;
+    -o-transition: 600ms;
 }
+.contacto input:hover {
+    background-color: #03f;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bolder;
+    padding: 10px;
+    border: 2px solid #03f;
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -o-border-radius: 0px;
+    transform: scale(0.95);
+    -webkit-transform: scale(0.95);
+    -moz-transform: scale(0.95);
+    -ms-transform: scale(0.95);
+    -o-transform: scale(0.95);
+}
+/*PIE_PAGINA*/
 
 #piePagina{
     height: 100%;
-    width: 100%;
+    width:100%;
     background-color: #0033ff;
+    
 }  
 #piePagina .pieArriba{
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     height: auto;
     width: auto;
+    
 }
 #piePagina .pieArriba .ubicacionDiv{
     justify-content: center;
@@ -574,8 +917,7 @@ hr:not([size]){
     padding-bottom: 15px;
 }
 #piePagina .pieArriba .ubicacionDiv .mapa iframe{
-    height: 450px;
-    width: 500px;
+    
     border-radius: 5px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -583,6 +925,7 @@ hr:not([size]){
     -o-border-radius: 5px;
     filter: grayscale(50%);
     -webkit-filter: grayscale(50%);
+    
 }
 #piePagina .pieArriba .ubicacionDiv p{
     font-family: 'Open Sans', sans-serif;
@@ -599,6 +942,7 @@ hr:not([size]){
     display: flex;
     flex-direction: column;
     height: auto;
+    margin: 1rem;
 }
 #piePagina .pieArriba .infoDiv .aliados{
     text-align: center;
@@ -609,6 +953,7 @@ hr:not([size]){
     color: #ffffff;
     font-size: 35px;
     text-align: center;
+    padding-top: 3rem;
 }
 #piePagina .pieArriba .infoDiv .aliados .hr5{
     background-color: #ffffff;
@@ -767,62 +1112,70 @@ hr:not([size]){
     font-weight: bold;
 }
 
-
-
 /*MEDIA QUERY-----------------------------------------------------------------------------------------------------*/
 
+
 @media (max-width: 1024px){
-.cajaMobile {
-    display: grid;
-    grid-template-areas: 
-    "propuestaValor"
-    "asociacionesClave" 
-    "actividadesClave" 
-    "recursosClave"  
-    "relacionesClientes"
-    "canales"
-    "segmentosClientes";
-   
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
-    grid-template-columns: 1fr;
-    margin-top: 3rem;
-    text-align: center;
+.canvasContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
 }
+    
 
     .propuestaValor {
-        grid-area: propuestaValor;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .asociacionesClave {
-        grid-area: asociacionesClave;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .actividadesClave {
-        grid-area: actividadesClave;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .recursosClave {
-        grid-area: recursosClave;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
     }
 
     .relacionesClientes {
-        grid-area: relacionesClientes;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
     }
 
     .canales {
-        grid-area: canales;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
     }
 
     .segmentosClientes {
-        grid-area: segmentosClientes;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
     }
 
+.navbar .container {
+    position: relative;
+    z-index:1 !important;
+}
 
-    .cajaMobile {
-        height: auto;
-    }
-
-    .cajaMobile textarea {
+    .canvasContainer textarea {
         padding: 5px;
         box-shadow: 0px 0px 10px hsl(0, 0%, 100%, 30%);
         border: none;
@@ -832,12 +1185,25 @@ hr:not([size]){
         font-family: 'Montserrat', sans-serif;
         background-size:cover;
         background-position: center;
-        transform: rotateY(180deg);
         text-overflow: ellipsis;
-        
     }
 
-    .cajaMobile .placeholder:hover {
+    .canvasContainer .cajaAlta {
+        width: 75vw;
+        height: 300px;
+    }
+    
+    .canvasContainer .cajaBaja {
+        width: 75vw;
+        height: 300px;
+    }
+
+    .formularioCompleto .canvasContainer .tarjeta {
+        width: 80vw;
+        height: 300px;
+    }
+
+    .canvasContainer .placeholder:hover {
         color: rgb(21, 31, 49);
         padding: 5px;
         text-shadow: 0.5px 0.5px 0.5px rgba(248, 247, 247, 0.596);
@@ -846,7 +1212,7 @@ hr:not([size]){
         visibility: hidden;
     }
 
-    .cajaMobile .btn {
+    .canvasContainer .btn {
         margin-top: 1rem;
         background-color: #90c5fd;
         border: none;
@@ -858,15 +1224,16 @@ hr:not([size]){
     }
 
     .btn:hover{
-        background-color: aqua;
+        background-color: rgb(164, 101, 247);
         transform: scale(1.5);
         transition:0.25s;
     }
 
-    .cajaMobile .card {
+    .canvasContainer .card {
         background-color: #c0ddfc;
         text-align: center;
-        font-family: 'Montserrat', sans-serif; ;
+        font-family: 'Montserrat', sans-serif; 
+        width: 80vw;
     }
 
     textarea:hover {
@@ -878,17 +1245,8 @@ hr:not([size]){
         visibility: visible;
     }
 
-/*BASECANVAS DESK*/
-
-        .baseCanvasDesk {
-            display: none;
-        }
-        .container {
-            display: none;
-        }
-
 /*BASECANVAS MOBILE*/
-        .baseCanvasMobile {
+        .baseCanvas {
             display: grid;
             grid-template-areas:
             "estructuraCostes"
@@ -909,9 +1267,8 @@ hr:not([size]){
             grid-area: fuenteIngresos;
         }
 
-        .baseCanvasMobile textarea {
+        .baseCanvas textarea {
             padding: 5px;
-            
             box-shadow: 0px 0px 10px hsl(0, 0%, 100%, 30%);
             color: blue;
             border: none;
@@ -919,12 +1276,14 @@ hr:not([size]){
             color: rgb(21, 31, 49);
             text-shadow: 0.5px 0.5px 0.5px rgba(248, 247, 247, 0.596);
             font-family: 'Montserrat', sans-serif;
-            background-image: url(../assets/images/diamante.png);
+            background-size:cover;
             background-position: center;
-            transform: rotateY(180deg);
+            transform-style: preserve-3d;
+            background-color: #90c5fd;
+            width: 80vw;
         }
         
-        .baseCanvasMobile textarea:hover {
+        .baseCanvas textarea:hover {
             transform: rotateY(0deg);
             background-color: rgb(209, 222, 245);
             transition: 1.5s;
@@ -933,7 +1292,12 @@ hr:not([size]){
             visibility: visible;
         }
 
-        .baseCanvasMobile  .btn{
+        .formularioCompleto .baseCanvas .tarjeta {
+            width: 80vw;
+            height: 300px;
+        }
+
+        .baseCanvas  .btn{
             margin-top: 1rem;
             background-color: #90c5fd;
             border: none;
@@ -945,21 +1309,202 @@ hr:not([size]){
             
         }
 
-        .baseCanvasMobile .btn:hover{
-            background-color: aqua;
+        .baseCanvas .btn:hover{
+            background-color: rgb(164, 101, 247);
             transform: scale(1.5);
             transition:0.25s;
+        
         }
 
-        .baseCanvasMobile .subtitulosCanvas {
+        .baseCanvas .subtitulosCanvas {
             text-align: center;
         }
 
-        .baseCanvasMobile .card {
+        .baseCanvas .card {
             background-color: #c0ddfc;
             text-align: center;
-            font-family: 'Montserrat', sans-serif; ;
+            font-family: 'Montserrat', sans-serif; 
+            width: 80vw;
         }
+
+/*FODA*/
+.foda {
+    display: grid;
+    justify-items: center;
+    text-align:center;
+    align-self: center;
+    grid-template-areas: 
+    "fortaleza"
+    "oportunidad"
+    "debilidad"
+     "amenaza";
+
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    margin-top: 15px;
+    margin-bottom: 1rem;
+}
+.fortalezas {
+    grid-area: fortaleza;
+    margin: 1rem;
+    
+}
+.oportunidades {
+    grid-area: oportunidad;
+    margin: 1rem;
+    
+}
+.debilidades {
+    grid-area: debilidad;
+   margin: 1rem;
+}
+.amenazas {
+    grid-area: amenaza;
+    margin: 1rem;
+}
+
+.fortalezas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.oportunidades {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.debilidades {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.amenazas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+.foda textarea {
+    padding: 1rem;
+    border-radius: 2rem;
+    border:none;
+    width: 80vw;
+    height: 300px;
+}
+.tituloFoda {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    color: #03f;
+    font-size: 25px;
+    text-align: center;
+    padding-top: 10px;
+    margin-top: 25px;
+}
+
+.formularioCompleto .foda .tarjeta {
+    width: 80vw;
+    height: 300px;
+}
+
+.foda .card {
+    background-color: #c0ddfc;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+    text-shadow: 0.5px 0.5px 0.5px rgba(250, 247, 247, 0.7);
+    width: 80vw;
+}
+
+/*MINDSET*/
+
+.mindsetTitulo{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    color: #03f;
+    font-size: 25px;
+    text-align: center;
+    padding-top: 5px;
+}
+
+.mindsetCheck {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    background: radial-gradient(#efe3f8, #ede9f8);
+    padding: 2rem;
+    border: transparent;
+    border-radius: 20px;
+    opacity: 80%;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.mindsetCheck .pregunta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    color: rgb(25, 25, 26);
+    padding: 10px;
+    border-radius: 20px;
+    border-bottom: #5c3fdd;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px rgba(118, 169, 245, 0.7);
+    text-align: center;
+}
+
+.mindsetCheck .mindsetPregunta {
+    margin-bottom: 1rem;
+}
+
+.entreTitulo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.entreTitulo .separador {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    color: #03f;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 10px;
+    margin-top: 10px;
+}
+
+.entreTitulo .aclaracion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color:#5c3fdd;
+    margin: 10px;
+    padding: 5px;
+    font-size: 15px;
+    border-radius: 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    text-align: center;
+}
+
+.entreTitulo .aclaracion .strongAclaracion {
+    margin-bottom: 10px;
+}
+
+.entreTitulo .aclaracion .itemsAclaraciones {
+    display: flex;
+    flex-direction:column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-left: 10px;
+    margin-right: 10px; 
+}
 
 /*CONTACTO*/
 
@@ -968,8 +1513,92 @@ hr:not([size]){
             flex-direction: column;
             align-items: center;
             text-align: center;
+            margin-bottom: 5rem;
         }
         
     
+/*PIE_PAGINA*/
+    .pieArriba {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        
     }
 
+    #piePagina .pieArriba {
+        margin: 5px;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        
+    }
+    .pieArriba .mapa {
+        
+        margin: 5px;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        width: fit-content;
+    }
+    #piePagina .pieArriba .infoDiv .imagenesAli{
+        display: flex;
+        flex-direction: column;
+        
+        width: 100vw; 
+        margin-top: 10rem;
+        margin-bottom: 10rem;
+    }
+
+    #piePagina .pieArriba .infoDiv .aliados h2 {
+        font-size: 20px;
+    }
+    #piePagina .pieArriba .infoDiv .aliados .hr5{
+        margin: 1rem 5px 1rem 5px;
+    }
+    #piePagina .pieArriba .ubicacionDiv {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+    }
+
+    #piePagina .pieArriba .ubicacionDiv h2{
+        font-size: 20px;
+    }
+
+    #piePagina .pieArriba .ubicacionDiv p{
+        text-align: center;
+        margin: 5px;
+    }
+    #piePagina .pieArriba .infoDiv {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 5px;
+    }
+    #piePagina .pieArriba .infoDiv .info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #piePagina .pieArriba .infoDiv .aliados .hrRedes {
+        margin: 5px;
+    }
+    #piePagina .pieArriba .infoDiv .info .links .hrLinks{
+        margin: 5px;
+    }
+    #piePagina .pieArriba .infoDiv .redes {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #piePagina .pieArriba .infoDiv .info .redes .iconos{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    hr:not([size]){
+        height: 4px;
+    }
+}
